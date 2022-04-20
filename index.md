@@ -10,35 +10,37 @@ title: Home
 Persuade's Engineering Tech Radar below is a helpful, language agnostic guide to what tools, techniques, and infrastructure services we should be adopting, learning about, or holding on / sun-setting. 
 
 
-### Tool
+### Tools
 Tools account for the IDEs, software, CI/CD services, version control solutions, etc. that we use day to day.
-#### Adopt
+#### **Adopt** ✅
 
-|           | Tool              | Description |
-|:----------|:------------------|:------------|
-| `[adopt]` | Visual Studio Code |   |
-| `[adopt]` | Azure Data Studio  |   |
-| `[adopt]` | Github             |   |
-| `[adopt]` | Github Actions     |   |
+| Tool              | Description |
+|:------------------|:------------|
+| Visual Studio Code |   |
+| Azure Data Studio  |   |
+| Github             |   |
+| Github Actions     |   |
 
-#### Learn
-|           | Tool              | Description |
-|:----------|:------------------|:------------|
-| `[adopt]` | Makefiles         |   |
-| `[adopt]` | Hashicorp Vault   |   |
 
-#### Hold
-|           | Tool              | Description |
-|:----------|:------------------|:------------|
-| `[adopt]` | Postman + Sync    |   |
-| `[adopt]` | Azure DevOps      |   |
+#### **Learn** 📚
+| Tool              | Description |
+|:------------------|:------------|
+| Makefiles         |   |
+| Hashicorp Vault   |   |
+
+
+#### **Hold** 🛑
+| Tool              | Description |
+|:------------------|:------------|
+| Postman + Sync    |   |
+| Azure DevOps      |   |
 
 ---------
 ### Techniques
 Techniques are general philosophies, methodologies, and technical approaches we take with the code that we write
 #### Adopt
 
-|           | Tool              | Description |
+|           | Technique              | Description |
 |:----------|:------------------|:------------|
 | `[adopt]` | Visual Studio Code |   |
 | `[adopt]` | Azure Data Studio  |   |
@@ -46,13 +48,13 @@ Techniques are general philosophies, methodologies, and technical approaches we 
 | `[adopt]` | Github Actions     |   |
 
 #### Learn
-|           | Tool              | Description |
+|           | Technique              | Description |
 |:----------|:------------------|:------------|
 | `[adopt]` | Makefiles         |   |
 | `[adopt]` | Hashicorp Vault   |   |
 
 #### Hold
-|           | Tool              | Description |
+|           | Technique              | Description |
 |:----------|:------------------|:------------|
 | `[adopt]` | Postman + Sync    |   |
 | `[adopt]` | Azure DevOps      |   |
@@ -62,7 +64,7 @@ Techniques are general philosophies, methodologies, and technical approaches we 
 Infrastructure is anything we use in our hosted environments (databases, cloud hosting providers, cloud services like message busses, cloud functions, etc.)
 #### Adopt
 
-|           | Tool              | Description |
+|           | Service              | Description |
 |:----------|:------------------|:------------|
 | `[adopt]` | Visual Studio Code |   |
 | `[adopt]` | Azure Data Studio  |   |
