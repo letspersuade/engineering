@@ -1,0 +1,10 @@
+{
+  "name": "engineering-docs",
+  "version": "1.0.0",
+  "description": "This directory holds the content needed to build the `/docs` folder into the static site. It utilizes `11ty` as the static site builder. If you need to manage assets (css / js), you can do that in this directory in the `assets` folder. If you need to modify the layout that documents get rendered within, you can do so in the `_includes/layout.njk` folder.",
+  "main": ".eleventy.js",
+  "dependencies": {
+    "markdown-it": "^13.0.1",
+    "markdown-it-replace-link": "^1.1.0"
+  }
+}
