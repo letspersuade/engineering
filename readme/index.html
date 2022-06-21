@@ -17,7 +17,7 @@
         <ul><li><a href="/github-pages-demo/dotnet/">.NET Engineering Docs</a></li></ul>
       </nav>
   </aside>
-      <h1>Persuade Engineering Docs</h1>
+      <h1>Cap Engineering Docs</h1>
 <h2>Domains &amp; Practices Quick Links</h2>
 <ul>
 <li><a href="../dotnet/">.NET</a></li>
@@ -124,7 +124,7 @@
 </ul>
 </li>
 <li>
-<p>🛑 <strong>Azure DevOps</strong> <code>[Version Control + CI/CD]</code>: Microsoft's foray into services for version control and build pipelines is feature rich and highly customizable but it has a heavy reliance on Microsoft based authentication for provisioning access. It also is <em>just</em> different enough to make it hard to ramp other engineers more familiar with Github into a system without effort.</p>
+<p>🛑 <strong><a href="https://azure.microsoft.com/en-us/services/devops/">Azure DevOps</a></strong> <code>[Version Control + CI/CD]</code>: Microsoft's foray into services for version control and build pipelines is feature rich and highly customizable but it has a heavy reliance on Microsoft based authentication for provisioning access. It also is <em>just</em> different enough to make it hard to ramp other engineers more familiar with Github into a system without effort.</p>
 <ul>
 <li>Recommended Alternative : <code>Github</code></li>
 </ul>
@@ -136,25 +136,33 @@
 <h4><strong>Adopt</strong> ✅</h4>
 <p>The techniques in this list are techniques that should be highly considered when developing any new or existing application at Persuade.</p>
 <ul>
-<li>✅ <strong>Feature Flags</strong></li>
-<li>✅ <strong>CQRS</strong></li>
-<li>✅ <strong>Vertical Slice Architecture</strong></li>
-<li>✅ <strong>Clean Architecture</strong></li>
-<li>✅ <strong>Configuration as a Service</strong></li>
+<li>✅ <strong><a href="https://www.atlassian.com/continuous-delivery/principles/feature-flags">Feature Flags</a></strong></li>
+<li>✅ <strong><a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs">CQRS</a></strong></li>
+<li>✅ <strong><a href="https://jimmybogard.com/vertical-slice-architecture/">Vertical Slice Architecture</a></strong></li>
+<li>✅ <strong><a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a></strong></li>
+<li>✅ <strong><a href="https://github.com/Azure/AppConfiguration#:~:text=Azure%20App%20Configuration%20is%20an,microservices%2C%20and%20other%20Azure%20resources.">Configuration as a Service</a></strong> : Azure has a service offering, but that's just an example of this.</li>
 </ul>
 <hr>
 <h4><strong>Learn</strong> 📚</h4>
 <p>The techniques in this list represent techniques that we know we should learn or have a better understanding of, not only for our own internal application development, but for our clients.</p>
 <ul>
-<li>📚 <strong>Domain Driven Development</strong></li>
-<li>📚 <strong>Test Driven Development</strong></li>
+<li>📚 <strong><a href="https://en.wikipedia.org/wiki/Domain-driven_design">Domain Driven Design</a></strong></li>
+<li>📚 <strong><a href="https://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development</a></strong></li>
 </ul>
 <hr>
 <h4><strong>Hold</strong> 🛑</h4>
 <p>The techniques in this list represent techniques we should, if possible, no longer be using as part of ongoing or new application development.</p>
 <ul>
-<li>🛑 <strong>Horizontal Slice Architecture</strong></li>
-<li>🛑 <strong>Traditional N-Tier Layered Architecture</strong></li>
+<li>🛑 <strong><a href="https://beardedeagle.com/horizontal-slice-versus-vertical-slice/#:~:text=A%20horizontal%20slice%20is%20a,run%20out%20of%20viable%20choices.">Horizontal Slice Architecture</a></strong>
+<ul>
+<li>Recommended Alternative : <code>Vertical Slice Architecture</code></li>
+</ul>
+</li>
+<li>🛑 <strong><a href="https://www.baeldung.com/cs/n-tier-architecture">Traditional N-Tier Layered Architecture</a></strong> : While Clean Architecture is also a layered architecture, it's all about inversion of control and the way those layers depend upon one another. The traditional n-tier architecture's layers are depend on each-other in a way that is less than ideal and causes complexity when moving services or infrastructure.
+<ul>
+<li>Recommended Alternative : <code>Clean Architecture</code>.</li>
+</ul>
+</li>
 </ul>
 
 
