@@ -2,7 +2,7 @@
 layout: layout.njk
 ---
 
-# Persuade Engineering Docs
+# Cap Engineering Docs
 
 ## Domains & Practices Quick Links
 * [.NET](dotnet.md)
@@ -72,7 +72,7 @@ The tools in this list represent tools we should, if possible, no longer be usin
 * 🛑 **[Postman + Sync](https://www.postman.com/)** `[API Documentation]` : While Postman for stand-alone development is fine, as soon as it would become beneficial to share the API documentation and scripting with a team (which it almost always is), we should favor .HTTP Files as defined above. Postman + Team Sync has become an expensive and bloated tool set for simple API documentation.
   * Recommended Alternative: `.HTTP Files`
 
-* 🛑 **Azure DevOps** `[Version Control + CI/CD]`: Microsoft's foray into services for version control and build pipelines is feature rich and highly customizable but it has a heavy reliance on Microsoft based authentication for provisioning access. It also is _just_ different enough to make it hard to ramp other engineers more familiar with Github into a system without effort.
+* 🛑 **[Azure DevOps](https://azure.microsoft.com/en-us/services/devops/)** `[Version Control + CI/CD]`: Microsoft's foray into services for version control and build pipelines is feature rich and highly customizable but it has a heavy reliance on Microsoft based authentication for provisioning access. It also is _just_ different enough to make it hard to ramp other engineers more familiar with Github into a system without effort.
   * Recommended Alternative : `Github`
 
 ------
@@ -82,20 +82,22 @@ While the tools section covers what we should use to build applications, this se
 
 #### **Adopt** ✅
 The techniques in this list are techniques that should be highly considered when developing any new or existing application at Persuade.
-* ✅ **Feature Flags**
-* ✅ **CQRS**
-* ✅ **Vertical Slice Architecture**
-* ✅ **Clean Architecture**
-* ✅ **Configuration as a Service**
+* ✅ **[Feature Flags](https://www.atlassian.com/continuous-delivery/principles/feature-flags)**
+* ✅ **[CQRS](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs)**
+* ✅ **[Vertical Slice Architecture](https://jimmybogard.com/vertical-slice-architecture/)**
+* ✅ **[Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)**
+* ✅ **[Configuration as a Service](https://github.com/Azure/AppConfiguration#:~:text=Azure%20App%20Configuration%20is%20an,microservices%2C%20and%20other%20Azure%20resources.)** : Azure has a service offering, but that's just an example of this.
 
 ------
 #### **Learn** 📚
 The techniques in this list represent techniques that we know we should learn or have a better understanding of, not only for our own internal application development, but for our clients.
-* 📚 **Domain Driven Development**
-* 📚 **Test Driven Development**
+* 📚 **[Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design)**
+* 📚 **[Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development)**
 
 ------
 #### **Hold** 🛑
 The techniques in this list represent techniques we should, if possible, no longer be using as part of ongoing or new application development.
-* 🛑 **Horizontal Slice Architecture**
-* 🛑 **Traditional N-Tier Layered Architecture**
+* 🛑 **[Horizontal Slice Architecture](https://beardedeagle.com/horizontal-slice-versus-vertical-slice/#:~:text=A%20horizontal%20slice%20is%20a,run%20out%20of%20viable%20choices.)**
+  * Recommended Alternative : `Vertical Slice Architecture`
+* 🛑 **[Traditional N-Tier Layered Architecture](https://www.baeldung.com/cs/n-tier-architecture)** : While Clean Architecture is also a layered architecture, it's all about inversion of control and the way those layers depend upon one another. The traditional n-tier architecture's layers are depend on each-other in a way that is less than ideal and causes complexity when moving services or infrastructure. 
+  * Recommended Alternative : `Clean Architecture`. 
