@@ -17,7 +17,7 @@
         <ul><li><a href="/github-pages-demo/dotnet/">.NET Engineering Docs</a></li></ul>
       </nav>
   </aside>
-      <h1>Cap Engineering Docs</h1>
+      <h1>Capillary North America Engineering Docs</h1>
 <h2>Domains &amp; Practices Quick Links</h2>
 <ul>
 <li><a href="../dotnet/">.NET</a></li>
@@ -102,11 +102,14 @@
 </ul>
 </li>
 <li>
-<p>📚 <strong><a href="https://podman.io/">Podman</a></strong> <code>[Containerization]</code> : As <code>Docker</code> is slowly clamping down on the use of Docker Desktop as a GUI for container management, new containerization services are coming out that adhere to the OCI (Open Container Initiative) protocol (same as Docker Images) to build and deploy container images. Podman is nearly indistinguishable from Docker and may have a better license of use.</p>
+<p>📚 <strong><a href="https://podman.io/">Podman</a></strong> <code>[Containerization]</code> : As <code>Docker</code> is slowly clamping down on the free use of Docker Desktop as a GUI for container management, new containerization services are coming out that adhere to the OCI (Open Container Initiative) protocol (same as Docker Images) to build and deploy container images. Podman is nearly indistinguishable from Docker and may have a better license of use.</p>
 <ul>
-<li><strong>What we need to know</strong></li>
+<li><strong>What we need to know</strong>
+<ul>
 <li>What benefits does Podman have over Docker?</li>
 <li>Does this at all impact our ability to deploy and run containers on cloud providers?</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -136,29 +139,61 @@
 <h4><strong>Adopt</strong> ✅</h4>
 <p>The techniques in this list are techniques that should be highly considered when developing any new or existing application at Persuade.</p>
 <ul>
-<li>✅ <strong><a href="https://www.atlassian.com/continuous-delivery/principles/feature-flags">Feature Flags</a></strong></li>
-<li>✅ <strong><a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs">CQRS</a></strong></li>
-<li>✅ <strong><a href="https://jimmybogard.com/vertical-slice-architecture/">Vertical Slice Architecture</a></strong></li>
-<li>✅ <strong><a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a></strong></li>
-<li>✅ <strong><a href="https://github.com/Azure/AppConfiguration#:~:text=Azure%20App%20Configuration%20is%20an,microservices%2C%20and%20other%20Azure%20resources.">Configuration as a Service</a></strong> : Azure has a service offering, but that's just an example of this.</li>
+<li>
+<p>✅ <strong><a href="https://www.atlassian.com/continuous-delivery/principles/feature-flags">Feature Flags</a></strong></p>
+</li>
+<li>
+<p>✅ <strong><a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs">CQRS</a></strong></p>
+</li>
+<li>
+<p>✅ <strong><a href="https://jimmybogard.com/vertical-slice-architecture/">Vertical Slice Architecture</a></strong></p>
+</li>
+<li>
+<p>✅ <strong><a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a></strong></p>
+</li>
+<li>
+<p>✅ <strong><a href="https://github.com/Azure/AppConfiguration#:~:text=Azure%20App%20Configuration%20is%20an,microservices%2C%20and%20other%20Azure%20resources.">Configuration as a Service</a></strong> : Azure has a service offering, but that's just an example of this.</p>
+</li>
 </ul>
 <hr>
 <h4><strong>Learn</strong> 📚</h4>
 <p>The techniques in this list represent techniques that we know we should learn or have a better understanding of, not only for our own internal application development, but for our clients.</p>
 <ul>
-<li>📚 <strong><a href="https://en.wikipedia.org/wiki/Domain-driven_design">Domain Driven Design</a></strong></li>
-<li>📚 <strong><a href="https://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development</a></strong></li>
+<li>
+<p>📚 <strong><a href="https://en.wikipedia.org/wiki/Domain-driven_design">Domain Driven Design</a></strong></p>
+<ul>
+<li><strong>What we need to know</strong>:
+<ul>
+<li>When is it appropriate to use full DDD?</li>
+<li>What are the benefits and tradeoffs of some of the concepts that come with DDD like <a href="https://martinfowler.com/eaaDev/EventSourcing.html">Event Sourcing</a>?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>📚 <strong><a href="https://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development</a></strong></p>
+<ul>
+<li><strong>What we need to know:</strong>
+<ul>
+<li>What's the right way to get started with TDD?</li>
+<li>How much is too much? Or is there such a thing? (when is it appropriate?)</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <hr>
 <h4><strong>Hold</strong> 🛑</h4>
 <p>The techniques in this list represent techniques we should, if possible, no longer be using as part of ongoing or new application development.</p>
 <ul>
-<li>🛑 <strong><a href="https://beardedeagle.com/horizontal-slice-versus-vertical-slice/#:~:text=A%20horizontal%20slice%20is%20a,run%20out%20of%20viable%20choices.">Horizontal Slice Architecture</a></strong>
+<li>
+<p>🛑 <strong><a href="https://beardedeagle.com/horizontal-slice-versus-vertical-slice/#:~:text=A%20horizontal%20slice%20is%20a,run%20out%20of%20viable%20choices.">Horizontal Slice Architecture</a></strong></p>
 <ul>
 <li>Recommended Alternative : <code>Vertical Slice Architecture</code></li>
 </ul>
 </li>
-<li>🛑 <strong><a href="https://www.baeldung.com/cs/n-tier-architecture">Traditional N-Tier Layered Architecture</a></strong> : While Clean Architecture is also a layered architecture, it's all about inversion of control and the way those layers depend upon one another. The traditional n-tier architecture's layers are depend on each-other in a way that is less than ideal and causes complexity when moving services or infrastructure.
+<li>
+<p>🛑 <strong><a href="https://www.baeldung.com/cs/n-tier-architecture">Traditional N-Tier Layered Architecture</a></strong> : While Clean Architecture is also a layered architecture, it's all about inversion of control and the way those layers depend upon one another. The traditional n-tier architecture's layers are depend on each-other in a way that is less than ideal and causes complexity when moving services or infrastructure.</p>
 <ul>
 <li>Recommended Alternative : <code>Clean Architecture</code>.</li>
 </ul>
