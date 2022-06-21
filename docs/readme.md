@@ -2,7 +2,7 @@
 layout: layout.njk
 ---
 
-# Cap Engineering Docs
+# Capillary North America Engineering Docs
 
 ## Domains & Practices Quick Links
 * [.NET](dotnet.md)
@@ -58,10 +58,10 @@ The tools in this list represent tools that we know we should learn or have a be
     * Does Vault support real time property updating?
 
 
-* 📚 **[Podman](https://podman.io/)** `[Containerization]` : As `Docker` is slowly clamping down on the use of Docker Desktop as a GUI for container management, new containerization services are coming out that adhere to the OCI (Open Container Initiative) protocol (same as Docker Images) to build and deploy container images. Podman is nearly indistinguishable from Docker and may have a better license of use.
+* 📚 **[Podman](https://podman.io/)** `[Containerization]` : As `Docker` is slowly clamping down on the free use of Docker Desktop as a GUI for container management, new containerization services are coming out that adhere to the OCI (Open Container Initiative) protocol (same as Docker Images) to build and deploy container images. Podman is nearly indistinguishable from Docker and may have a better license of use.
     * **What we need to know**
-    * What benefits does Podman have over Docker? 
-    * Does this at all impact our ability to deploy and run containers on cloud providers?
+      * What benefits does Podman have over Docker? 
+      * Does this at all impact our ability to deploy and run containers on cloud providers?
 
 * 📚 **[.HTTP Files](https://github.com/Huachao/vscode-restclient)** `[API Documentation]` : A growing trend in API documentation is to use `.http` files to hold examples calls to API endpoints. These files can exist in version control along side the codebase and can utilize scripting abilities to share variables among different documented API request. Not only can this be used for documentation but also as a tool to quickly hit endpoints or to run automated testing. Plugins exist in most major IDEs to support `.http` files. 
 
@@ -83,21 +83,34 @@ While the tools section covers what we should use to build applications, this se
 #### **Adopt** ✅
 The techniques in this list are techniques that should be highly considered when developing any new or existing application at Persuade.
 * ✅ **[Feature Flags](https://www.atlassian.com/continuous-delivery/principles/feature-flags)**
+
 * ✅ **[CQRS](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs)**
+
 * ✅ **[Vertical Slice Architecture](https://jimmybogard.com/vertical-slice-architecture/)**
+
 * ✅ **[Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)**
+
 * ✅ **[Configuration as a Service](https://github.com/Azure/AppConfiguration#:~:text=Azure%20App%20Configuration%20is%20an,microservices%2C%20and%20other%20Azure%20resources.)** : Azure has a service offering, but that's just an example of this.
 
 ------
 #### **Learn** 📚
 The techniques in this list represent techniques that we know we should learn or have a better understanding of, not only for our own internal application development, but for our clients.
 * 📚 **[Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design)**
+  * **What we need to know**:
+    * When is it appropriate to use full DDD?
+    * What are the benefits and tradeoffs of some of the concepts that come with DDD like [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html)?
+
 * 📚 **[Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development)**
+  * **What we need to know:**
+    * What's the right way to get started with TDD?
+    * How much is too much? Or is there such a thing? (when is it appropriate?)
 
 ------
 #### **Hold** 🛑
 The techniques in this list represent techniques we should, if possible, no longer be using as part of ongoing or new application development.
+
 * 🛑 **[Horizontal Slice Architecture](https://beardedeagle.com/horizontal-slice-versus-vertical-slice/#:~:text=A%20horizontal%20slice%20is%20a,run%20out%20of%20viable%20choices.)**
   * Recommended Alternative : `Vertical Slice Architecture`
+
 * 🛑 **[Traditional N-Tier Layered Architecture](https://www.baeldung.com/cs/n-tier-architecture)** : While Clean Architecture is also a layered architecture, it's all about inversion of control and the way those layers depend upon one another. The traditional n-tier architecture's layers are depend on each-other in a way that is less than ideal and causes complexity when moving services or infrastructure. 
   * Recommended Alternative : `Clean Architecture`. 
