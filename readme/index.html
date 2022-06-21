@@ -18,46 +18,116 @@
       </nav>
   </aside>
       <h1>Persuade Engineering Docs</h1>
-<h2>Pages</h2>
+<h2>Domains &amp; Practices Quick Links</h2>
 <ul>
 <li><a href="../dotnet/">.NET</a></li>
 </ul>
-<h2>Tech Radar</h2>
+<h2><strong>General Tech Radar</strong></h2>
 <p>The general engineering tech radar is a tech agnostic look at tools and techniques that are useful across multiple engineering practices and domains. For a look at a more refined list for your discipline or domain, go to your domain specific page listed above.</p>
-<h3>Tools</h3>
+<h3><strong>Tools</strong></h3>
 <p>Tools account for the IDEs, software, CI/CD services, version control solutions, etc. that we use day to day.</p>
-<h4>Adopt ✅</h4>
+<h4><strong>Adopt</strong> ✅</h4>
 <p>The tools in this list are tools that should be highly considered when developing any new or existing application at Persuade.</p>
 <ul>
-<li><strong>Visual Studio Code</strong> : sdfsdf</li>
-<li><strong>Azure Data Studio</strong> :</li>
-<li><strong>Github</strong> :</li>
-<li><strong>Github Actions</strong> :</li>
-<li><strong>Docker</strong> :</li>
-<li><strong>Kubernetes</strong> :</li>
-<li><strong>JIRA</strong> :</li>
+<li>
+<p>✅ <strong><a href="https://code.visualstudio.com/">Visual Studio Code</a></strong> <code>[IDE]</code>: Visual Studio Code is the go-to, cross platform IDE for general application development. It seems to be the industry choice and is backed by a massive community of engineers and extension developers.</p>
+</li>
+<li>
+<p>✅ <strong><a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio">Azure Data Studio</a></strong> <code>[Databases]</code>: If you can't find the right extension for Visual Studio Code to access, view, and execute queries against your database of choice, Azure Data Studio is a free, cross-platform database tool from Microsoft that uses the Visual Studio Code interface and allows for extensions, query saving, etc.</p>
+</li>
+<li>
+<p>✅ <strong><a href="https://github.com/">Github</a></strong> <code>[Version Control]</code>: Github his the version control service of choice. It offers generous free tiers, private repos, and easy to use CI/CD services.</p>
+</li>
+<li>
+<p>✅ <strong><a href="https://github.com/features/actions">Github Actions</a></strong> <code>[CI/CD]</code>: Github Actions is the go-to for writing CI/CD services for automating application building, testing, and deployment.</p>
+</li>
+<li>
+<p>✅ <strong><a href="https://www.docker.com/">Docker</a></strong> <code>[Containerization]</code>: Docker is the industry standard for application containerization and image development, which ensures the applications are built and run in a consistent, reproducible environment, regardless of the host machine state.</p>
+</li>
+<li>
+<p>✅ <strong><a href="https://kubernetes.io/">Kubernetes</a></strong> <code>[Container Orchestration]</code>: If your application warrants container orchestration, Kubernetes is the industry standard. If you need to orchestrate the deployment and configuration of multiple containers to drive an application (say micro-services, or any complex architecture), Kubernetes is the most feature rich tool to do so.</p>
+</li>
+<li>
+<p>✅ <strong><a href="https://www.atlassian.com/software/jira">JIRA</a></strong> <code>[Task Management]</code>: The tool we all love to hate, JIRA is still the go-to for orchestrating teams (with stories, tasks, and epics) for application development.</p>
+</li>
 </ul>
 <hr>
-<h4>Learn 📚</h4>
+<h4><strong>Learn</strong> 📚</h4>
 <p>The tools in this list represent tools that we know we should learn or have a better understanding of, not only for our own internal application development, but for our clients.</p>
 <ul>
-<li><strong>Terraform</strong> :</li>
-<li><strong>Ansible</strong> :</li>
-<li><strong>Makefiles</strong> :</li>
-<li><strong>Hashicorp Vault</strong> :</li>
-<li><strong>Podman</strong> :</li>
+<li>
+<p><strong><a href="https://www.terraform.io/">Terraform</a></strong> <code>[Infrastructure as Code]</code> : Terraform allows you to use a declarative syntax to declare the cloud infrastructure you need for your application, and persist that in version control along with the rest of your code. Using their CLI tools, you can then run that definition against any of the major cloud providers and it will provision the resources needed to meet that definition file. This allows all team members context, visibility and access to see how the application environments are set up and effect change in those systems all without leaving their code + CLI tools.</p>
+<ul>
+<li><strong>What we need to know</strong>:
+<ul>
+<li>At what point should we be using Terraform vs manual provisioning and set-up?</li>
+<li>How do we use Terraform?</li>
+<li>Where should we store the Terraform files?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://www.ansible.com/">Ansible</a></strong> <code>[Infrastructure as Code]</code> : While there is quite a bit of overlap with Terraform when it comes to provisioning cloud infrastructure, Ansible is more focused on configuration management of the provisioned infrastructure after it has been provisioned. Think OS or library updates. Ansible uses a procedural definition, meaning its scripts (playbooks) and processed from top to bottom, where Terraform uses a declarative format, where order doesn't matter.</p>
+<ul>
+<li><strong>What we need to know</strong>:
+<ul>
+<li>At what point should we be using Ansible vs manual configuration and set-up?</li>
+<li>How do we use Ansible?</li>
+<li>Where should we store the config values?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://opensource.com/article/18/8/what-how-makefile">Makefiles</a></strong> <code>[Build Scripts]</code> : Makefiles are a great way to create cross-platform build scripts. Rather than depending on each frameworks own CLI tools like Node's <code>NPM</code> in combination with <code>package.json</code> to run scripts, or .NET's <code>dotnet</code> cli tool to build, run tests, etc. you can standardize on a single <code>make build</code> or <code>make test</code> command, which is defined within a <code>makefile</code> generally in the root of the project, and it allows you to obfuscate the underlying build tooling, making it easier for engineers to move between projects and have a consistent way to build both projects, regardless of technology.</p>
+<ul>
+<li><strong>What we need to know</strong>
+<ul>
+<li>Is this truly a cross-platform solution? What about Windows?</li>
+<li>What are the Makefile best practices?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://www.vaultproject.io/">Hashicorp Vault</a></strong> <code>[Secrets &amp; Configuration Management]</code> : Following the technique of Configuration as a Service, Vault is a hosted solution (can be self-hosted) that manages application configuration and secrets, allowing you to keep them outside of version control, CI/CD tools, and outside of cloud hosting provider interfaces.</p>
+<ul>
+<li><strong>What we need to know</strong>
+<ul>
+<li>Are there better alternatives for general configuration management?</li>
+<li>Does Vault support real time property updating?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://podman.io/">Podman</a></strong> <code>[Containerization]</code> : As <code>Docker</code> is slowly clamping down on the use of Docker Desktop as a GUI for container management, new containerization services are coming out that adhere to the OCI (Open Container Initiative) protocol (same as Docker Images) to build and deploy container images. Podman is nearly indistinguishable from Docker and may have a better license of use.</p>
+<ul>
+<li><strong>What we need to know</strong></li>
+<li>What benefits does Podman have over Docker?</li>
+<li>Does this at all impact our ability to deploy and run containers on cloud providers?</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://github.com/Huachao/vscode-restclient">.HTTP Files</a></strong> <code>[API Documentation]</code> : A growing trend in API documentation is to use <code>.http</code> files to hold examples calls to API endpoints. These files can exist in version control along side the codebase and can utilize scripting abilities to share variables among different documented API request. Not only can this be used for documentation but also as a tool to quickly hit endpoints or to run automated testing. Plugins exist in most major IDEs to support <code>.http</code> files.</p>
+</li>
 </ul>
 <hr>
-<h4>Hold 🛑</h4>
+<h4><strong>Hold</strong> 🛑</h4>
 <p>The tools in this list represent tools we should, if possible, no longer be using as part of ongoing or new application development.</p>
 <ul>
-<li><strong>Postman + Sync</strong> :</li>
-<li><strong>Azure DevOps</strong> :</li>
+<li>
+<p><strong>Postman + Sync</strong> <code>[API Documentation]</code> : While Postman for stand-alone development is fine, as soon as it would become beneficial to share the API documentation and scripting with a team (which it almost always is), we should favor .HTTP Files as defined above. Postman + Team Sync has become an expensive and bloated tool set for simple API documentation.</p>
+</li>
+<li>
+<p><strong>Azure DevOps</strong> `:</p>
+</li>
 </ul>
 <hr>
-<h3>Techniques</h3>
+<h3><strong>Techniques</strong></h3>
 <p>While the tools section covers what we should use to build applications, this section covers <strong>how</strong> we should build an application.</p>
-<h4>Adopt ✅</h4>
+<h4><strong>Adopt</strong> ✅</h4>
 <p>The techniques in this list are techniques that should be highly considered when developing any new or existing application at Persuade.</p>
 <ul>
 <li><strong>Feature Flags</strong> : sdfsdf</li>
@@ -67,117 +137,22 @@
 <li><strong>Docker</strong> :</li>
 <li><strong>Kubernetes</strong> :</li>
 <li><strong>JIRA</strong> :</li>
+<li><strong>Configuration as a Service</strong> :</li>
 </ul>
 <hr>
-<h4>Learn 📚</h4>
+<h4><strong>Learn</strong> 📚</h4>
 <p>The techniques in this list represent techniques that we know we should learn or have a better understanding of, not only for our own internal application development, but for our clients.</p>
 <ul>
 <li><strong>Domain Driven Development</strong> :</li>
 <li><strong>Test Driven Development</strong> :</li>
 </ul>
 <hr>
-<h4>Hold 🛑</h4>
+<h4><strong>Hold</strong> 🛑</h4>
 <p>The techniques in this list represent techniques we should, if possible, no longer be using as part of ongoing or new application development.</p>
 <ul>
 <li><strong>Horizontal Slice Architecture</strong> :</li>
 <li><strong>Traditional N-Tier Layered Architecture</strong> :</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:right">Icon</th>
-<th style="text-align:right">Status</th>
-<th style="text-align:left">Tool</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">✅</td>
-<td style="text-align:right">Adopt</td>
-<td style="text-align:left">Visual Studio Code</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">✅</td>
-<td style="text-align:right">Adopt</td>
-<td style="text-align:left">Azure Data Studio</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">✅</td>
-<td style="text-align:right">Adopt</td>
-<td style="text-align:left">Github</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">✅</td>
-<td style="text-align:right">Adopt</td>
-<td style="text-align:left">Github Actions</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">✅</td>
-<td style="text-align:right">Adopt</td>
-<td style="text-align:left">Docker</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">✅</td>
-<td style="text-align:right">Adopt</td>
-<td style="text-align:left">Kubernetes</td>
-<td style="text-align:left">Kubernetes (K8S) is an open-source container-orchestration system for automating cloud-native application deployment, hosting, and management</td>
-</tr>
-<tr>
-<td style="text-align:right">✅</td>
-<td style="text-align:right">Adopt</td>
-<td style="text-align:left">JIRA</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">📚</td>
-<td style="text-align:right">Learn</td>
-<td style="text-align:left">Terraform</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">📚</td>
-<td style="text-align:right">Learn</td>
-<td style="text-align:left">Ansible</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">📚</td>
-<td style="text-align:right">Learn</td>
-<td style="text-align:left">Makefiles</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">📚</td>
-<td style="text-align:right">Learn</td>
-<td style="text-align:left">Hashicorp Vault</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">📚</td>
-<td style="text-align:right">Learn</td>
-<td style="text-align:left">Podman</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">🛑</td>
-<td style="text-align:right">Hold</td>
-<td style="text-align:left">Postman + Sync</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:right">🛑</td>
-<td style="text-align:right">Hold</td>
-<td style="text-align:left">Azure DevOps</td>
-<td style="text-align:left"></td>
-</tr>
-</tbody>
-</table>
 
 
     </main>
