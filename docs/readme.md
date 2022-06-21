@@ -6,6 +6,11 @@ layout: layout.njk
 
 ## Domains & Practices Quick Links
 * [.NET](dotnet.md)
+* [Backend](backend.md)
+* [Frontend](frontend.md)
+* [React](react.md)
+* [Java](java.md)
+* [DevOps](devops.md)
 
 
 ## **General Tech Radar**
