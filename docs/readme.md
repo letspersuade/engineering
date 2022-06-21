@@ -34,44 +34,46 @@ The tools in this list are tools that should be highly considered when developin
 #### **Learn** 📚
 The tools in this list represent tools that we know we should learn or have a better understanding of, not only for our own internal application development, but for our clients.
 
-* **[Terraform](https://www.terraform.io/)** `[Infrastructure as Code]` : Terraform allows you to use a declarative syntax to declare the cloud infrastructure you need for your application, and persist that in version control along with the rest of your code. Using their CLI tools, you can then run that definition against any of the major cloud providers and it will provision the resources needed to meet that definition file. This allows all team members context, visibility and access to see how the application environments are set up and effect change in those systems all without leaving their code + CLI tools.
+* 📚 **[Terraform](https://www.terraform.io/)** `[Infrastructure as Code]` : Terraform allows you to use a declarative syntax to declare the cloud infrastructure you need for your application, and persist that in version control along with the rest of your code. Using their CLI tools, you can then run that definition against any of the major cloud providers and it will provision the resources needed to meet that definition file. This allows all team members context, visibility and access to see how the application environments are set up and effect change in those systems all without leaving their code + CLI tools.
   * **What we need to know**:
     * At what point should we be using Terraform vs manual provisioning and set-up?
     * How do we use Terraform?
     * Where should we store the Terraform files?
 
-* **[Ansible](https://www.ansible.com/)** `[Infrastructure as Code]` : While there is quite a bit of overlap with Terraform when it comes to provisioning cloud infrastructure, Ansible is more focused on configuration management of the provisioned infrastructure after it has been provisioned. Think OS or library updates. Ansible uses a procedural definition, meaning its scripts (playbooks) and processed from top to bottom, where Terraform uses a declarative format, where order doesn't matter.
+* 📚 **[Ansible](https://www.ansible.com/)** `[Infrastructure as Code]` : While there is quite a bit of overlap with Terraform when it comes to provisioning cloud infrastructure, Ansible is more focused on configuration management of the provisioned infrastructure after it has been provisioned. Think OS or library updates. Ansible uses a procedural definition, meaning its scripts (playbooks) and processed from top to bottom, where Terraform uses a declarative format, where order doesn't matter.
   * **What we need to know**:
     * At what point should we be using Ansible vs manual configuration and set-up?
     * How do we use Ansible?
     * Where should we store the config values?
   
 
-* **[Makefiles](https://opensource.com/article/18/8/what-how-makefile)** `[Build Scripts]` : Makefiles are a great way to create cross-platform build scripts. Rather than depending on each frameworks own CLI tools like Node's `NPM` in combination with `package.json` to run scripts, or .NET's `dotnet` cli tool to build, run tests, etc. you can standardize on a single `make build` or `make test` command, which is defined within a `makefile` generally in the root of the project, and it allows you to obfuscate the underlying build tooling, making it easier for engineers to move between projects and have a consistent way to build both projects, regardless of technology.
+* 📚 **[Makefiles](https://opensource.com/article/18/8/what-how-makefile)** `[Build Scripts]` : Makefiles are a great way to create cross-platform build scripts. Rather than depending on each frameworks own CLI tools like Node's `NPM` in combination with `package.json` to run scripts, or .NET's `dotnet` cli tool to build, run tests, etc. you can standardize on a single `make build` or `make test` command, which is defined within a `makefile` generally in the root of the project, and it allows you to obfuscate the underlying build tooling, making it easier for engineers to move between projects and have a consistent way to build both projects, regardless of technology.
   * **What we need to know**
     * Is this truly a cross-platform solution? What about Windows?
     * What are the Makefile best practices?
 
-* **[Hashicorp Vault](https://www.vaultproject.io/)** `[Secrets & Configuration Management]` : Following the technique of Configuration as a Service, Vault is a hosted solution (can be self-hosted) that manages application configuration and secrets, allowing you to keep them outside of version control, CI/CD tools, and outside of cloud hosting provider interfaces.
+* 📚 **[Hashicorp Vault](https://www.vaultproject.io/)** `[Secrets & Configuration Management]` : Following the technique of Configuration as a Service, Vault is a hosted solution (can be self-hosted) that manages application configuration and secrets, allowing you to keep them outside of version control, CI/CD tools, and outside of cloud hosting provider interfaces.
   * **What we need to know**
     * Are there better alternatives for general configuration management? 
     * Does Vault support real time property updating?
 
 
-* **[Podman](https://podman.io/)** `[Containerization]` : As `Docker` is slowly clamping down on the use of Docker Desktop as a GUI for container management, new containerization services are coming out that adhere to the OCI (Open Container Initiative) protocol (same as Docker Images) to build and deploy container images. Podman is nearly indistinguishable from Docker and may have a better license of use.
+* 📚 **[Podman](https://podman.io/)** `[Containerization]` : As `Docker` is slowly clamping down on the use of Docker Desktop as a GUI for container management, new containerization services are coming out that adhere to the OCI (Open Container Initiative) protocol (same as Docker Images) to build and deploy container images. Podman is nearly indistinguishable from Docker and may have a better license of use.
     * **What we need to know**
     * What benefits does Podman have over Docker? 
     * Does this at all impact our ability to deploy and run containers on cloud providers?
 
-* **[.HTTP Files](https://github.com/Huachao/vscode-restclient)** `[API Documentation]` : A growing trend in API documentation is to use `.http` files to hold examples calls to API endpoints. These files can exist in version control along side the codebase and can utilize scripting abilities to share variables among different documented API request. Not only can this be used for documentation but also as a tool to quickly hit endpoints or to run automated testing. Plugins exist in most major IDEs to support `.http` files. 
+* 📚 **[.HTTP Files](https://github.com/Huachao/vscode-restclient)** `[API Documentation]` : A growing trend in API documentation is to use `.http` files to hold examples calls to API endpoints. These files can exist in version control along side the codebase and can utilize scripting abilities to share variables among different documented API request. Not only can this be used for documentation but also as a tool to quickly hit endpoints or to run automated testing. Plugins exist in most major IDEs to support `.http` files. 
 
 ------
 #### **Hold** 🛑
 The tools in this list represent tools we should, if possible, no longer be using as part of ongoing or new application development.
 
-* **Postman + Sync** `[API Documentation]` : While Postman for stand-alone development is fine, as soon as it would become beneficial to share the API documentation and scripting with a team (which it almost always is), we should favor .HTTP Files as defined above. Postman + Team Sync has become an expensive and bloated tool set for simple API documentation.
+* 🛑 **[Postman + Sync](https://www.postman.com/)** `[API Documentation]` : While Postman for stand-alone development is fine, as soon as it would become beneficial to share the API documentation and scripting with a team (which it almost always is), we should favor .HTTP Files as defined above. Postman + Team Sync has become an expensive and bloated tool set for simple API documentation.
+  * Recommended Alternative: `.HTTP Files`
 
-* **Azure DevOps** `: 
+* 🛑 **Azure DevOps** `[Version Control + CI/CD]`: Microsoft's foray into services for version control and build pipelines is feature rich and highly customizable but it has a heavy reliance on Microsoft based authentication for provisioning access. It also is _just_ different enough to make it hard to ramp other engineers more familiar with Github into a system without effort.
+  * Recommended Alternative : `Github`
 
 ------
 
@@ -80,23 +82,20 @@ While the tools section covers what we should use to build applications, this se
 
 #### **Adopt** ✅
 The techniques in this list are techniques that should be highly considered when developing any new or existing application at Persuade.
-* **Feature Flags** : sdfsdf
-* **CQRS** : 
-* **Vertical Slice Architecture** : 
-* **Clean Architecture** : 
-* **Docker** : 
-* **Kubernetes** : 
-* **JIRA** :
-* **Configuration as a Service** : 
+* ✅ **Feature Flags**
+* ✅ **CQRS**
+* ✅ **Vertical Slice Architecture**
+* ✅ **Clean Architecture**
+* ✅ **Configuration as a Service**
 
 ------
 #### **Learn** 📚
 The techniques in this list represent techniques that we know we should learn or have a better understanding of, not only for our own internal application development, but for our clients.
-* **Domain Driven Development** : 
-* **Test Driven Development** : 
+* 📚 **Domain Driven Development**
+* 📚 **Test Driven Development**
 
 ------
 #### **Hold** 🛑
 The techniques in this list represent techniques we should, if possible, no longer be using as part of ongoing or new application development.
-* **Horizontal Slice Architecture** : 
-* **Traditional N-Tier Layered Architecture** : 
+* 🛑 **Horizontal Slice Architecture**
+* 🛑 **Traditional N-Tier Layered Architecture**
