@@ -1,4 +1,4 @@
-# github-pages-demo
+# Persuade Engineering Docs
 
 ## Editing on Github
 Feel free to edit the documents for your relevant practice or discipline directly on Github. The documents are written in markdown and can be authored and edited directly from the Github interface without having to pull the code down locally.
