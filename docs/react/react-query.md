@@ -94,9 +94,9 @@ function useUpdatePostMutation(postId) {
 function useSomeMutation() {  
   return useMutation(updateSomething, {
     // These are globally set
-    onSuccess: (data) => // Do success things..
-    onError: (error) => // Do error things..
-    onSettled: () => // Do this no matter what
+    onSuccess: (data) => { // Do success things.. },
+    onError: (error) => { // Do error things.. },
+    onSettled: () => { // Do this no matter what }
   });
 }
 ```
@@ -109,15 +109,18 @@ You can define these globally in a custom hook like above or you can do them mor
 function handleSubmit() {  
   updateSomethingMutation.mutate({ // params }, {
     // Contextual handlers
-    onSuccess: (data) => // Do success things..
-    onError: (error) => // Do error things..
-    onSettled: () => // Do this no matter what
+    onSuccess: (data) => { // Do success things.. },
+    onError: (error) => { // Do error things.. },
+    onSettled: () => { // Do this no matter what }
   })
 }
 ```
 
 ### Avoid double caching/storing data in local state
 Just use the data object returned from your query or mutation.
+
+### Use the `select` option/function for transforming data on the client side
+Is the data structure from the api not what you want? Using the `select` option/fn with `useQuery` gives you a safe place to transform your data client side but keep the original in the cache. This is an ideal way to subscribe to data changes on a smaller part of your data. [Learn more about react-query's select option](https://tkdodo.eu/blog/react-query-data-transformations#3-using-the-select-option)
 
 ### Things to think about when making new custom queries
 - Can this go stale?
