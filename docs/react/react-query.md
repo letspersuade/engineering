@@ -90,10 +90,14 @@ function useUpdatePostMutation(postId) {
 
 ### Prefer using the hook callbacks instead of useEffect for side effects
 
+Do you need to pop up an alert or toast after a query or mutation errors? You can stay away from `useEffect` and instead use the callbacks provided by react query in the options object. [Consider setting up a global handler for this with the query client.](https://tkdodo.eu/blog/react-query-error-handling#the-global-callbacks)
+
+You can define these globally in your custom hooks:
+
 ``` javascript
-function useSomeMutation() {  
+function useSomeMutation() {
   return useMutation(updateSomething, {
-    // These are globally set
+    // These are globally set, useQuery can do this too
     onSuccess: (data) => { // Do success things.. },
     onError: (error) => { // Do error things.. },
     onSettled: () => { // Do this no matter what }
@@ -101,7 +105,7 @@ function useSomeMutation() {
 }
 ```
 
-You can define these globally in a custom hook like above or you can do them more contextually when using the mutation `mutate` method in a component.
+Or you can trigger side effects more contextually when using the mutation `mutate` method in a component:
 
 ``` javascript
 // in some component some where you're probably gonna trigger a mutation...
