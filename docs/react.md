@@ -6,9 +6,11 @@ layout: layout.njk
 
 # React
 
-![](assets/react.png?raw=true)
-
 ## Ecosystem
 
 ### Server State/API Calls Libraries
 - [React Query](react/react-query.md)
+
+## Learning Roadmap
+![](assets/react.png?raw=true)
+
