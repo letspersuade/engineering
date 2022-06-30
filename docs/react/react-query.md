@@ -1,3 +1,9 @@
+---
+tags: ["react", "web-platform", "react-query", "server-state", "data-caching"]
+title: "React Query"
+layout: layout.njk
+---
+
 # [React Query](https://react-query.tanstack.com/)
 
 ## Why would I use this?
